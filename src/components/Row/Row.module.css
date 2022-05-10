@@ -1,0 +1,13 @@
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.row ul {
+    flex-basis: 35%;
+}
+
+.row div {
+    flex-basis: 60%;
+}
