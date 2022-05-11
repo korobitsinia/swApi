@@ -1,3 +1,3 @@
-import PeoplePage from "./PeoplePage";
+import Starships from "./Starships";
 
-export default PeoplePage;
+export default Starships;

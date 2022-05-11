@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import {  useContext, useState } from "react";
 import { SwapiContext } from "../components/App/App";
 
 export default function useAsyncSwapi(swapiMethod, array = false, id) {
@@ -9,7 +9,7 @@ export default function useAsyncSwapi(swapiMethod, array = false, id) {
 
   async function download() {
     setLoading(true);
-    let newId = id || Math.floor(2 + Math.random() * (19 + 1 - 2));
+    let newId = id || Math.floor(2 + Math.random() * (18 + 1 - 2));
     try {
       let result;
       if (array) {
@@ -24,5 +24,6 @@ export default function useAsyncSwapi(swapiMethod, array = false, id) {
       setLoading(false);
     }
   }
+
   return [data, loading, error, download];
 }

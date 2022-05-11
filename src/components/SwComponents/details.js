@@ -36,11 +36,12 @@ const PlanetDetails = (props) => {
 };
 const StarshipDetails = (props) => {
   const swapi = useContext(SwapiContext);
-
   return (
     <ItemDetails
       requestName={"getStarship"}
-      itemId={props.itemId}
+      itemId={
+        props.location ? props.location.pathname.split("/")[2] : props.itemId
+      }
       getImage={swapi.getImageStarship}
     >
       <Record label={"Name"} field={"name"} />

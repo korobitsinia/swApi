@@ -1,28 +1,21 @@
 import React, { useState } from "react";
 
-import Row from "../Row";
+import Row from "../../components/Row";
 
-import {
-  PeopleList,
-  PersonDetails,
-  PlanetDetails,
-  PlanetList,
-  StarshipDetails,
-  StarshipList,
-} from "../SwComponents";
+import { PlanetDetails, PlanetList } from "../../components/SwComponents";
 
-const PeoplePage = () => {
-  const [personId, setPersonId] = useState(4);
-  const onPersonSelect = (id) => {
-    setPersonId(id);
+const PlanetPage = () => {
+  const [planetId, setPlanetId] = useState(4);
+  const onPlanetSelect = (id) => {
+    setPlanetId(id);
   };
 
-  const list = <PeopleList onPersonSelect={onPersonSelect} itemId={personId} />;
+  const list = <PlanetList onPlanetSelect={onPlanetSelect} itemId={planetId} />;
   const details = (
-    <PersonDetails onPersonSelect={onPersonSelect} itemId={personId} />
+    <PlanetDetails onPlanetSelect={onPlanetSelect} itemId={planetId} />
   );
 
   return <Row leftItem={list} rightItem={details} />;
 };
 
-export default PeoplePage;
+export default PlanetPage;

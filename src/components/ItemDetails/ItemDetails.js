@@ -40,7 +40,7 @@ const ItemDetails = (props) => {
 
 ItemDetails.propTypes = {
   requestName: PropTypes.string,
-  itemId: PropTypes.number,
+  itemId: PropTypes.any,
   getImage: PropTypes.func,
 };
 export default ItemDetails;

@@ -1,3 +1,3 @@
-import PeoplePage from "./Planets";
+import Planets from "./Planets";
 
-export default PeoplePage;
+export default Planets;
