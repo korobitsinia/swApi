@@ -1,8 +1,8 @@
-import SwapiService from "../services/service";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { SwapiContext } from "../components/App/App";
 
 export default function useAsyncSwapi(swapiMethod, array = false, id) {
-  const swapiService = new SwapiService();
+  const swapi = useContext(SwapiContext);
   const [data, setData] = useState({});
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
@@ -13,9 +13,9 @@ export default function useAsyncSwapi(swapiMethod, array = false, id) {
     try {
       let result;
       if (array) {
-        result = await swapiService[swapiMethod]();
+        result = await swapi[swapiMethod]();
       } else {
-        result = await swapiService[swapiMethod](newId);
+        result = await swapi[swapiMethod](newId);
       }
       setData(result);
     } catch (error) {

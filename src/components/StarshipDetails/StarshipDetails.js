@@ -1,16 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const StarshipDetails = props => {
-    return (
-        <div>
-
-        </div>
-    );
-};
-
-StarshipDetails.propTypes = {
-
+const StarshipDetails = (props) => {
+  return <div></div>;
 };
 
 export default StarshipDetails;

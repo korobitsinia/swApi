@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
+
 import IndicatorsRender from "../IndicatorsRender";
 
 import useAsyncSwapi from "../../hooks/useAsyncSwapi";
@@ -18,7 +20,6 @@ function ItemList(props) {
       {!loading &&
         !error &&
         itemList.map((item) => {
-
           const { id } = item;
           const label = props.children(item);
           return (
@@ -30,5 +31,10 @@ function ItemList(props) {
     </ul>
   );
 }
+
+ItemList.propTypes = {
+  onItemSelect: PropTypes.func,
+  requestName: PropTypes.string,
+};
 
 export default ItemList;

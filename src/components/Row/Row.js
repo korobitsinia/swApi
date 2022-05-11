@@ -1,5 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import style from "./Row.module.css";
+
+
 //React element props
 const Row = ({ leftItem, rightItem }) => {
   return (
@@ -8,6 +11,11 @@ const Row = ({ leftItem, rightItem }) => {
       {rightItem}
     </div>
   );
+};
+
+Row.propTypes = {
+  leftItem: PropTypes.element,
+  rightItem: PropTypes.element,
 };
 
 export default Row;

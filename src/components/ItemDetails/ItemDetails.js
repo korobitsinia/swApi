@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
-import useAsyncSwapi from "../../hooks/useAsyncSwapi";
+import PropTypes from "prop-types";
+
 import IndicatorsRender from "../IndicatorsRender/IndicatorsRender";
+
+import useAsyncSwapi from "../../hooks/useAsyncSwapi";
 
 import style from "./ItemDetails.module.css";
 
@@ -35,4 +38,9 @@ const ItemDetails = (props) => {
   );
 };
 
+ItemDetails.propTypes = {
+  requestName: PropTypes.string,
+  itemId: PropTypes.number,
+  getImage: PropTypes.func,
+};
 export default ItemDetails;

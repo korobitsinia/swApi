@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import ItemDetails from "../ItemDetails";
 import Record from "../Record";
-
-import SwapiService from "../../services/service";
-const swapi = new SwapiService();
+import { SwapiContext } from "../App/App";
 
 const PersonDetails = (props) => {
+  const swapi = useContext(SwapiContext);
   return (
     <ItemDetails
       requestName={"getPerson"}
@@ -20,6 +19,8 @@ const PersonDetails = (props) => {
   );
 };
 const PlanetDetails = (props) => {
+  const swapi = useContext(SwapiContext);
+
   return (
     <ItemDetails
       requestName={"getPlanet"}
@@ -34,6 +35,8 @@ const PlanetDetails = (props) => {
   );
 };
 const StarshipDetails = (props) => {
+  const swapi = useContext(SwapiContext);
+
   return (
     <ItemDetails
       requestName={"getStarship"}
